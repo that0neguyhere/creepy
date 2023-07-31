@@ -1,6 +1,6 @@
 game.StarterGui:SetCore("SendNotification",  {
 	Title = "Smug Notification";
-	Text = "DRIPPERS!1!!1!#6196 + cashier#5737";
+	Text = "drippersisfunni, ca3r";
 	Icon = "rbxthumb://type=Asset&id=7270904412&w=150&h=150"})
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/random-sh-t/main/4eye's%20net-libary%20auto%20applier.lua"))()
