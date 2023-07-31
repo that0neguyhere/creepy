@@ -258,7 +258,7 @@ lbl("low effort ui obviously")--]]
 local flingmode=2
 local allowshiftlock=true
 local ctrltp=true
-local discharscripts=true
+local discharscripts=false
 local removebparts=false
 
 local function reanimate()
@@ -273,7 +273,7 @@ local function reanimate()
 	local novoid = true --prevents parts from going under workspace.FallenPartsDestroyHeight if you control them
 	local antiragdoll = true --removes instances that are usually used for ragdolling form your character
 	local addPartsOnRun = false --allows u to add more parts and joints to the simulation after it started
-	local discharscripts = false --disables all localScripts parented to your character before reanimation
+	local discharscripts = discharscripts --disables all localScripts parented to your character before reanimation
 	local removebparts = removebparts --removes the parts that you cannot control in your character by making them fall to void
 	local R15toR6 = true --adds fake r6 parts and joints for animations if your character is r15
 	local walkSpeed = 18 --your walkspeed (can be changed at runtime)
