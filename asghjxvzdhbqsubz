@@ -286,11 +286,7 @@ local function reanimate()
 	local c=lp.Character
 	if not c then return end
 	if not c:IsDescendantOf(ws) then return end
-	
-	if stopreanimate() then
-		return
-	end
-	
+
 	local hum=c:FindFirstChildOfClass("Humanoid")
 	local rootpart=gp(c,"HumanoidRootPart","BasePart") or gp(c,"Torso","BasePart") or gp(c,"UpperTorso","BasePart") or (hum and hum.RootPart) or timegp(c,"HumanoidRootPart","BasePart",0.5) or c:FindFirstChildWhichIsA("BasePart")
 	if not rootpart then return end
