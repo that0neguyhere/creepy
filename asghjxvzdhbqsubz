@@ -13,7 +13,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/random-sh-t
 
 	-gh 13421786478,13421911402,13421828828,13421768871,13415165827,5674298865,5674299814,5132802731
 ]]
-
+--[[
 --findfirstchildofclass faster than getservice
 local plrs=game:FindFirstChildOfClass("Players")
 local rs=game:FindFirstChildOfClass("RunService")
@@ -139,7 +139,7 @@ end)
 local isServerInstance=function(i)
 	return not isClientInstance(i)
 end
-
+]]
 --[[local i1=i("Frame") 
 local i2=i("Frame") 
 local i3=i("ScrollingFrame") 
@@ -255,11 +255,10 @@ end
 lbl("by MyWorld")
 lbl("low effort ui obviously")--]]
 
-local flingmode=2
-local allowshiftlock=true
-local ctrltp=true
-local discharscripts=false
-local removebparts=false
+local allowshiftlock=nil
+local ctrltp=nil
+local discharscripts=nil
+local removebparts=nil
 
 local function reanimate()
 	--[[
@@ -286,7 +285,11 @@ local function reanimate()
 	local c=lp.Character
 	if not c then return end
 	if not c:IsDescendantOf(ws) then return end
-
+	
+	if stopreanimate() then
+		return
+	end
+	
 	local hum=c:FindFirstChildOfClass("Humanoid")
 	local rootpart=gp(c,"HumanoidRootPart","BasePart") or gp(c,"Torso","BasePart") or gp(c,"UpperTorso","BasePart") or (hum and hum.RootPart) or timegp(c,"HumanoidRootPart","BasePart",0.5) or c:FindFirstChildWhichIsA("BasePart")
 	if not rootpart then return end
